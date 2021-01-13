@@ -17,14 +17,14 @@ class UserSeeder extends AbstractSeed
     {
         $data = [
             [
-                'user_id'    => 1,
+                'id'    => 1,
                 'created' => date('Y-m-d H:i:s'),
                 'username' => 'tester1',
                 'password' => 'hashed',
         
             ],
             [
-                'user_id'    => 2,
+                'id'    => 2,
                 'created' => date('Y-m-d H:i:s'),
                 'username' => 'tester2',
                 'password' => 'hashed',

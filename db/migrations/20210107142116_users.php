@@ -19,9 +19,9 @@ final class Users extends AbstractMigration
     public function change()
     {
             // create the table
-            $table = $this->table('users',['id' => false, 'primary_key' => ['user_id']]);
-            $table->addColumn('user_id', 'integer',['identity' => true])
-                  ->addColumn('created', 'datetime')
+            // Phinx automatically creates an auto-incrementing primary key column called id for every table.
+            $table = $this->table('users');
+            $table->addColumn('created', 'datetime')
                   ->addColumn('username', 'string')
                   ->addColumn('password', 'string')
                   ->addIndex(['username'], [

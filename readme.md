@@ -5,7 +5,7 @@ vendor/bin/phinx create MyMigration
 vendor/bin/phinx migrate -e development
 
 ## Peruuta muutokset
-vendor/bin/phinx rollback -e production
+vendor/bin/phinx rollback -e development
 
 ## Tee uusi seeds - tiedosto
 vendor/bin/phinx seed:create UserSeeder

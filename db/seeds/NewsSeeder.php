@@ -3,7 +3,7 @@
 
 use Phinx\Seed\AbstractSeed;
 
-class NotesSeeder extends AbstractSeed
+class NewsSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -24,24 +24,26 @@ class NotesSeeder extends AbstractSeed
     {
         $data = [
             [
-                'notes_id'    => 1,
-                'title' => 'Hello',
-                'content' => 'message',
+                'id'    => 1,
+                'title' => 'Ensimmäinen uutinen',
+                'body' => 'Viimein tämä toimii!',
+                'slug' => 'first',
                 'created' => date('Y-m-d H:i:s'),
                 'expiry' => date('2021-12-31 00:00:00'), 
                 'user_id' => 1,
             ],
             [
-                'notes_id'    => 2,
-                'title' => 'Hello 2',
-                'content' => 'message 2',
+                'id'    => 2,
+                'title' => 'Toinen uutinen',
+                'body' => 'Miten menee onhan tässä jo touhuttu!',
+                'slug' => 'second',
                 'created' => date('Y-m-d H:i:s'),
                 'expiry' => date('2021-12-31 00:00:00'), 
                 'user_id' => 2,
             ]
         ];
 
-        $posts = $this->table('notes');
+        $posts = $this->table('news');
         $posts->insert($data)
               ->saveData();
     }

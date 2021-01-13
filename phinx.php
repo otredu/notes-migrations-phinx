@@ -21,7 +21,7 @@ return
         'development' => [
             'adapter' => 'mysql',
             'host' => 'localhost',
-            'name' => 'notes',
+            'name' => 'news_db',
             'user' => 'root',
             'pass' => '',
             'port' => '3306',
