@@ -26,7 +26,7 @@ class NewsSeeder extends AbstractSeed
             [
                 'id'    => 1,
                 'title' => 'Ensimmäinen uutinen',
-                'body' => 'Viimein tämä toimii!',
+                'content' => 'Viimein tämä toimii!',
                 'slug' => 'first',
                 'created' => date('Y-m-d H:i:s'),
                 'expiry' => date('2021-12-31 00:00:00'), 
@@ -35,7 +35,7 @@ class NewsSeeder extends AbstractSeed
             [
                 'id'    => 2,
                 'title' => 'Toinen uutinen',
-                'body' => 'Miten menee onhan tässä jo touhuttu!',
+                'content' => 'Miten menee onhan tässä jo touhuttu!',
                 'slug' => 'second',
                 'created' => date('Y-m-d H:i:s'),
                 'expiry' => date('2021-12-31 00:00:00'), 

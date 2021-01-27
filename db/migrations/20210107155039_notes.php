@@ -19,13 +19,13 @@ final class Notes extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('news');
-        $table->addColumn('title', 'string', ['limit' => 50])
-            ->addColumn('body', 'string')
+        $table->addColumn('title', 'string')
+            ->addColumn('content', 'string')
             ->addColumn('slug', 'string')
             ->addColumn('created', 'datetime')
             ->addColumn('expiry', 'datetime')
             ->addColumn('user_id', 'integer')
             ->addForeignKey('user_id', 'users', 'id', array('delete'=> 'CASCADE', 'update'=> 'NO_ACTION'))
-            ->save();
+            ->create();
     }
 }
